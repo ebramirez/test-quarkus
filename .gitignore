@@ -1,0 +1,7 @@
+.vscode
+.mvn
+.classpath
+.project
+target
+getting-started/target
+getting-started/.settings

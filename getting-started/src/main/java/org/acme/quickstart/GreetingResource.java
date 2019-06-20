@@ -38,8 +38,8 @@ public class GreetingResource {
 	@GET
 	@Produces(TEXT_PLAIN)
 	public String listado() {
-		return repositorio.getStream().map(this::printEntidad).collect(joining(lineSeparator()));
-//		return repositorio.streamAll().map(this::printEntidad).collect(joining(lineSeparator()));
+		return "Listado:" + lineSeparator() +
+			repositorio.getStream().map(this::printEntidad).collect(joining(lineSeparator()));
 	}
 	
 	private String printEntidad(Entidad entidad) {

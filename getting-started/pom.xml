@@ -9,9 +9,9 @@
 	<version>1.0-SNAPSHOT</version>
 	<properties>
 		<surefire-plugin.version>2.22.0</surefire-plugin.version>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<quarkus.version>0.18.0</quarkus.version>
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<quarkus.version>1.9.1.Final</quarkus.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencyManagement>
@@ -35,19 +35,6 @@
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-kubernetes</artifactId>
 		</dependency>
-
-		<!-- AP4K -->
-		<dependency>
-			<groupId>io.ap4k</groupId>
-			<artifactId>openshift-annotations</artifactId>
-			<version>0.4.2</version>
-			<exclusions>
-				<exclusion>
-					<groupId>com.sun</groupId>
-					<artifactId>tools</artifactId>                    
-				</exclusion>
-			</exclusions> 
-		</dependency>
 	  
 		<!-- DB -->
 		<dependency>
@@ -60,12 +47,16 @@
 		</dependency>
 		<dependency>
 			<groupId>io.quarkus</groupId>
-			<artifactId>quarkus-jdbc-postgresql</artifactId>
+			<artifactId>quarkus-jdbc-h2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-test-h2</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.jinq</groupId>
 			<artifactId>jinq-jpa</artifactId>
-			<version>1.8.25</version>
+			<version>1.8.31</version>
 		</dependency>
 
 		<!-- #tests -->
